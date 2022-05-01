@@ -1,0 +1,21 @@
+.btn {
+    border: none;
+    background-color: $color-secondary;
+    padding: 1.5rem 5rem;
+    border-radius: 1000px;
+
+    color: $color-primary;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+
+    &:active {
+        filter: brightness(0.95);
+    }
+}

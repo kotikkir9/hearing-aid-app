@@ -1,0 +1,123 @@
+.select-sound {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+
+        &__container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        &__icon {
+            height: 3rem;
+            width: 3rem;
+            padding: 0.5rem;
+
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                background-color: rgba(#fff, 0.05);
+            }
+        }
+
+        &__category {
+            display: flex;
+        }
+
+        &__btn {
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            font-size: 2rem;
+            width: 100%;
+            padding: 1.5rem 3rem;
+            border-bottom: 4px solid transparent;
+            transition: all 0.3s;
+            cursor: pointer;
+            
+            &--active {
+                border-bottom: 4px solid $color-secondary;
+            }
+        }
+    }
+
+    .section-sounds {
+        background-color: $color-primary-light;
+        padding-top: 1rem;
+        overflow-y: auto;
+    }
+
+    .sounds {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sound {
+        
+        &__radio-input {
+            display: none;
+        }
+
+        &__radio-button {
+            height: 2.8rem;
+            width: 2.8rem;
+            border: 2.5px solid $color-grey-light-1;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                height: 1.7rem;
+                width: 1.7rem;
+                border-radius: 50%;
+                background-color: $color-secondary;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: opacity 0.2s;
+            }
+        }
+
+        &__label {
+            display: grid;
+            grid-template-columns: 3rem 1fr;
+            gap: 2rem;
+
+            padding-top: 2rem;
+            padding-left: 2.5rem;
+            font-size: 1.8rem;
+            font-weight: 400;
+            cursor: pointer;
+
+            p {
+                padding-bottom: 1.5rem;
+                border-bottom: 0.5px solid rgba($color-grey-light-1, 0.5);
+            }
+        }
+
+        &__radio-input:checked ~ .sound__label .sound__radio-button::after {
+            opacity: 1;
+        }
+
+        &__radio-input:checked ~ .sound__label .sound__radio-button {
+            border-color: $color-secondary;
+        }
+    }
+}

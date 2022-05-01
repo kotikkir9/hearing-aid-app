@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+// COLOR VARIABLES
+$color-primary: #17273F;
+$color-primary-light: #455265;
+$color-primary-light-2: #303947;
+
+
+$color-secondary: #57B7EC;
+
+$color-grey: #7E8796;
+$color-grey-light-1: #D1D4D9;
+$color-grey-light-2: #E8E9EC;
+
+$font-family: 'Inter', sans-serif;
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+body {
+    font-family: $font-family;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.6;
+    background: $color-primary;
+    
+    height: 100vh;
+    width: 100vw;
+}

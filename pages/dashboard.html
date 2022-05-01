@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script defer src="../js/dashboard.js"></script>
+
+    <title>GO&#39; LY&#39;</title>
+</head>
+<body class="dashboard">
+    <header class="header">
+        <div class="header__item">
+            <div class="header__icon-container"><p>L</p></div>
+            <p class="header__percent">99%</p>
+            <ion-icon class="header__battery-icon" name="battery-full"></ion-icon>
+        </div>
+        <div class="header__item">
+            <div class="header__icon-container"><p>R</p></div>
+            <p class="header__percent">99%</p>
+            <ion-icon class="header__battery-icon" name="battery-full"></ion-icon>
+        </div>
+        <div class="header__item">
+            <div class="header__icon-case"></div>
+            <p class="header__percent">40%</p>
+            <ion-icon class="header__battery-icon" name="battery-half"></ion-icon>
+        </div>
+    </header>
+
+    <section class="sound-selection">
+        <h3 class="heading-tertiary">Notification Sound</h3>
+         <div class="sound-selection__input-container">
+            <input type="text" placeholder="Notification Sound 2" class="sound-selection__input" disabled>
+            <ion-icon name="chevron-forward" class="sound-selection__input-icon"></ion-icon>
+         </div>
+         <div class="sound-selection__slider-container">
+            <input type="range" min="1" max="100" value="50" class="sound-selection__slider">
+            <ion-icon name="play" class="sound-selection__play-icon"></ion-icon>
+         </div>
+    </section>
+
+    <section class="eq">
+        <div class="eq__buttons">
+            <div>
+                <button class="eq__btn eq__btn--left eq__btn--active">R</button>
+                <button class="eq__btn eq__btn--right">L</button>
+            </div>
+            <select class="eq__btn eq__select">
+                <option value="default" selected>Default</option>
+                <option value="preset-1">Preset 1</option>
+                <option value="preset-2">Preset 2</option>
+                <option value="preset-3">Preset 3</option>
+                <option value="preset-4">Preset 4</option>
+            </select>
+        </div>
+        <div class="eq__equalizer-container">
+            <div class="eq__equalizer">
+                <input id="slider-1" type="range" min="1" max="100" value="50" class="eq__slider">
+                <input id="slider-2" type="range" min="1" max="100" value="50" class="eq__slider">
+                <input id="slider-3" type="range" min="1" max="100" value="50" class="eq__slider">
+                <input id="slider-4" type="range" min="1" max="100" value="50" class="eq__slider">
+                <input id="slider-5" type="range" min="1" max="100" value="50" class="eq__slider">
+            </div>
+            <div class="eq__text">
+                <span>60 Hz</span>
+                <span>250 Hz</span>
+                <span>1 Khz</span>
+                <span>4 Khz</span>
+                <span>8 Khz</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="volume">
+        <div class="volume__container">
+            <img src="../img/aid-left.png" alt="Hearing Aid" class="volume__img volume__img--left">
+            <span class="volume__text">L</span>
+            <div id="volume-left" class="volume__outer-bar">
+                <div class="volume__inner-bar"></div>
+            </div>
+        </div>
+        <div class="volume__container">
+            <img src="../img/aid-right.png" alt="Hearing Aid" class="volume__img volume__img--right">
+            <span class="volume__text">R</span>
+            <div id="volume-right" class="volume__outer-bar">
+                <div class="volume__inner-bar"></div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="menu-nav">
+        <ul class="menu-nav__list">
+            <li class="menu-nav__item">
+                <ion-icon name="home" class="menu-nav__icon"></ion-icon>
+                <p class="menu-nav__text">Home</p>
+            </li>
+            <li class="menu-nav__item">
+                <ion-icon name="options" class="menu-nav__icon"></ion-icon>
+                <p class="menu-nav__text">Dashboard</p>
+            </li>
+            <li class="menu-nav__item">
+                <ion-icon name="information-circle" class="menu-nav__icon"></ion-icon>
+                <p class="menu-nav__text">About</p>
+            </li>
+        </ul>
+    </nav>
+</body>
