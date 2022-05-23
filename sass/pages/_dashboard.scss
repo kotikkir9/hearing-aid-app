@@ -303,6 +303,7 @@
             grid-row: 1 / 2;
             width: 90%;
             height: auto;
+            display: none;
 
             @include respond(small) {
                 width: 70%;
@@ -322,9 +323,18 @@
             font-weight: 600;
             align-self: end;
             line-height: 1;
+            grid-row: 1 / -1;
 
             @include respond(small) {
                 font-size: 4em;
+            }
+
+            &--left {
+                grid-column: 1 / 2;
+            }
+
+            &--right {
+                grid-column: 2 / 3;
             }
         }
 

@@ -5,4 +5,11 @@
             @content;
         }
     }
+
+    @if($breakpoint == smallest) {
+        //Height max 600px
+        @media only screen and (max-height: 37.5em) {
+            @content;
+        }
+    }
 }

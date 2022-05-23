@@ -12,6 +12,11 @@ html {
   font-size: 62.5%;
   overflow: hidden;
 }
+@media only screen and (max-height: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: "Inter", sans-serif;
@@ -34,7 +39,7 @@ body {
 }
 
 .heading-tertiary {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
 }
 @media only screen and (max-height: 46.25em) {
@@ -385,6 +390,7 @@ body {
   grid-row: 1/2;
   width: 90%;
   height: auto;
+  display: none;
 }
 @media only screen and (max-height: 46.25em) {
   .dashboard .volume__img {
@@ -402,11 +408,18 @@ body {
   font-weight: 600;
   align-self: end;
   line-height: 1;
+  grid-row: 1/-1;
 }
 @media only screen and (max-height: 46.25em) {
   .dashboard .volume__text {
     font-size: 4em;
   }
+}
+.dashboard .volume__text--left {
+  grid-column: 1/2;
+}
+.dashboard .volume__text--right {
+  grid-column: 2/3;
 }
 .dashboard .volume__outer-bar {
   grid-row: 1/-1;
@@ -517,8 +530,9 @@ body {
   filter: brightness(0.8);
 }
 .select .item__img {
-  height: 8rem;
-  width: 8rem;
+  margin-left: 1rem;
+  height: 5rem;
+  width: 5rem;
 }
 .select .item__heading {
   margin-right: 4rem;
